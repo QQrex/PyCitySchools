@@ -66,7 +66,17 @@ Our next step will be to calculate the new student count without the THS 9th gra
 >
 >Cell 2 - Subtracting total student count with student count of THS 9th to get new student count.
 
-With the new student count, we can now calculate the new passing math and reading scores.
+With the new student count, we can now calculate the new passing math, reading and overall scores.
 
-![passingMR]()
->Line 3 - Count all passing math scores in st
+![passingMR](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/pass%20math%2C%20reading%20over%20avg.PNG)
+Cell 1, line 3 - Counting all student IDs with math scores greater than or equal to 70.
+Cell 1, line 5 - Counting all student IDs with reading scores greater than or equal to 70.
+Cell 1, line 11 - Calculating passing math %
+Cells 1, line 12 - Calculating passing reading %.
+Cell 2, line 2,3 - Counting all students IDs with math and reading scores greater than or equal to 70.
+Cell 2, line 7 -  Calculating passing both math and reading %.
+
+Finally, we can create our district summary.
+
+![Dsum](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/district%20summary.PNG)
+
