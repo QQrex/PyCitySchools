@@ -112,7 +112,7 @@ Similar to how we set up the district DataFrame, we are going to calculate the d
 
 Next, we will assemble all the data into a DataFrame for each school, add some formating and check the results of the DataFrame.
 
-423534
+![perschoolsum](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/per%20school%20summary%20df.PNG)
 
 Upon inspection of the per school summary DataFrame, we notice the THS is not accurate because we only removed the math and reading scores for THS 9th graders. The total student count at THS still contains THS 9th graders. In order to complete our per school summary DataFrame, we ned to recount the THS students.
 
@@ -151,3 +151,66 @@ With the correct data for THS we need to place the data in the per school summar
 Finally, we check our per school summary DataFrame.
 
 ![newschoolDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/check%20per%20school%20df%20after%20replace%20THS%20percent.PNG)
+
+Now that our summary DataFrames looks clean, we can start compiling some metrics. We can sort our per school summary Dataframe by % overall passing to show the top 5 and bottom schools.
+
+![highlow](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/high%20and%20low%20performers.PNG)
+>Cell 1 - Sort per school summary Dataframe by '% over all passing' for top schools
+>Cell 2 - Sort per school summary Dataframe by '% over all passing' for bottom schools
+
+We can also create a DataFrame of average reading and math scores per school base on school grades. We first need to create a DataFrame for each grade level.
+![gradeDFs](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/Dataframes%20for%20grade%20levels.PNG)
+
+Next we find the average math and reading scores score for each grades level DataFrame. We can use groupby school to create a Series of averages scores per school.
+![groupby](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/average%20group%20by%20grade.PNG)
+
+After we find all the average scores per school, by grade level. We will need to put them into a DataFrame.
+![AverageDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/create%20average%20data%20frame%2C%20format.PNG)
+>Cell 1 and 2 - We concatenate our average grade Series and add the grade level column headers.
+>
+>Cell 3 - Formate dataframe
+
+Our final average DataFrame looks like:
+
+![mathdf](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/math%20score%20avg%20df.PNG)
+![readingdf](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/reading%20score%20avg%20df.PNG)
+
+Our next metric would be to create spending summary DataFrame with categories based on spending per student and average scores/% passing for each category.
+
+![spendingbins](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/scholl%20spending%20average%2C%20spending%20bins%2C%20group%20name.PNG)
+>Cell 1 - Get description of per school capita series.
+>Cell 2 - Create spending bins and names for spending bins.
+
+Next, we will create a new column with our spending bins with pd.cut method.
+![cutspendingbins](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/cut%20spending%20in%20per%20school%20summary%2C%20avg%20scores%2C%20passing.PNG)
+>Cell 1 - With pd.cut, we are declaring a new column in per school summary DataFrame named "Spending Ranges (Per Student)" and fill the column with our per school capita series again. However, we are also placing the "Per Student Budget" into spending bins/group names.
+>
+>Cell 2 - Using groupby to group spending bins and find the average math, reading and overall scores.
+
+Next we can create our DataFrame for spending summary and add some formating to the DataFrame.
+
+![createspendindf](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/spending%20df%2C%20format.PNG)
+
+Our final spending summary DataFrame:
+
+![spendingDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/size%20df%20check.PNG)
+
+Next, we want to create a size summary DataFrame based on school size categories and average score/% passing for each category.
+
+![sizeBCA](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/size%20bin%2C%20cut%2C%20avg.PNG)
+>Cell 1 - Create size bin and group name
+>
+>Cell 2 - Similar to when we cut spending bins, we are declaring new column in school summary DataFrame name "School Size" and fill column with total student count placed in bins.
+>
+>Cell 3 - Using groupby to group size bin the average math, reading and overall scores.
+
+With our data group in size bins we can create our DataFrame.
+
+![createsize](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/size%20df%2C%20format.PNG)
+
+Our final school size summary DataFrame:
+![sizedf](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/size%20df%20check.PNG)
+
+Our last metric DataFrame is to look at the scores by school type. Since our per school summary DataFrame already has a column of school type, we can just use .groupby to group the school types and find average and % passing scores. Then create a Dataframe with school type as Index.
+
+![type](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/type.PNG)
