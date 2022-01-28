@@ -112,9 +112,7 @@ Similar to how we set up the district DataFrame, we are going to calculate the d
 
 Next, we will assemble all the data into a DataFrame for each school, add some formating and check the results of the DataFrame.
 
-![schoolDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/per%20school%20data%20frame.PNG)
-
-![schoolcheck](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/school%20summary%20check.PNG)
+423534
 
 Upon inspection of the per school summary DataFrame, we notice the THS is not accurate because we only removed the math and reading scores for THS 9th graders. The total student count at THS still contains THS 9th graders. In order to complete our per school summary DataFrame, we ned to recount the THS students.
 
