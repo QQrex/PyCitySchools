@@ -120,8 +120,36 @@ Upon inspection of the per school summary DataFrame, we notice the THS is not ac
 
 ![THSnewCount](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/THS%20new%20student%20count.PNG)
 >Line 3 - Count total total students at THS
+>
 >Line 7 to 9 - Count THS 9th graders
+>
 >Line 11 - Calculate new total student count at THS
 
-With the new student count of THS, we need to recaculate passing math, reading and overall % at THS.
+Next we will need to find all THS 10th to 12th graders with passing math, reading and overall grades.
 
+![THSdf](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/THS%20passing%20math%2C%20reading%20overall%20%25.PNG)
+Cell 1 - Create DataFrame of THS 10th to 12th graders with passing math scores.
+
+Cell 2- Creat DataFrame of THS 10th to 12th graders with passing reading scores.
+
+Cell 3 - Create DataFrame of THS 10th to 12th graders that passing math and reading scores.
+
+With the new student count of THS and THS students with passing grades, we can recaculate passing math, reading and overall % at THS.
+
+![THS%](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/pass%20percent%2C%20math%2C%20read%2C%20both.PNG)
+>Cell 1 - Count passing math scores at THS and caculate passing %.
+>
+>Cell 2 - Count passing reading scores at THS and caculate passing %.
+>
+>Cell 3 - Count passing overall scores at THS and caculate passing%.
+
+With the correct data for THS we need to place the data in the per school summary DataFrame. We will accompish this by using the .loc method similar to how we replace the THS 9th grader math and reading scores
+
+![replace](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/replace%20per_school%20percentages.PNG)
+>Cell 1 - Replacing THS math % with .loc method by using 'THS' as index for row and '% passing math' as column
+>Cell 2 - Replacing THS reading % with .loc method by using 'THS' as index for row and '% passing reading' as column
+>Cell 3 - Replacing THS overall % with .loc method by using THS as index for row and '% passing overall' as column
+
+Finally, we check our per school summary DataFrame.
+
+![newschoolDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/check%20per%20school%20df%20after%20replace%20THS%20percent.PNG)
