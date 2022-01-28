@@ -70,13 +70,58 @@ With the new student count, we can now calculate the new passing math, reading a
 
 ![passingMR](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/pass%20math%2C%20reading%20over%20avg.PNG)
 Cell 1, line 3 - Counting all student IDs with math scores greater than or equal to 70.
+
 Cell 1, line 5 - Counting all student IDs with reading scores greater than or equal to 70.
-Cell 1, line 11 - Calculating passing math %
+
+Cell 1, line 11 - Calculating passing math %.
+
 Cells 1, line 12 - Calculating passing reading %.
+
 Cell 2, line 2,3 - Counting all students IDs with math and reading scores greater than or equal to 70.
+
 Cell 2, line 7 -  Calculating passing both math and reading %.
 
-Finally, we can create our district summary.
+With all the datapoints we need for our district DataFrame, all that is left is to construct the DataFrame.
 
 ![Dsum](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/district%20summary.PNG)
+
+Similar to how we set up the district DataFrame, we are going to calculate the datapoints for the school data frame with the schools as indexes
+
+![SchoolCode](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/school%20summary%20code.PNG)
+>Line 2 - Set index by school name and find type of school.
+>
+>Line 5 - Count total students per school.
+>
+>Line 8 - Calculate total budget per school.
+>
+>Line 10 - Calculate total spent per student at each school.
+>
+>Line 13, 14 - Calculate average math and reading score per school.
+>
+>Line 17, 18 - Create Dataframe of students that pass math or reading.
+>
+>Line 21, 22 - Count students that past math and reading per school.
+>
+>Line 25, 26 - Calculate % passing math and reading scores per school.
+>
+>Lin 29,30 - Creating Dataframe of student that past both math and reading.
+>
+>Line 33 - Counting students that past both math and reading per school.
+>
+>Line 36 - Caculate % passing both math and reading scores per school.
+
+Next, we will assemble all the data into a DataFrame for each school, add some formating and check the results of the DataFrame.
+
+![schoolDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/per%20school%20data%20frame.PNG)
+
+![schoolcheck](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/school%20summary%20check.PNG)
+
+Upon inspection of the per school summary DataFrame, we notice the THS is not accurate because we only removed the math and reading scores for THS 9th graders. The total student count at THS still contains THS 9th graders. In order to complete our per school summary DataFrame, we ned to recount the THS students.
+
+![THSnewCount](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/THS%20new%20student%20count.PNG)
+>Line 3 - Count total total students at THS
+>Line 7 to 9 - Count THS 9th graders
+>Line 11 - Calculate new total student count at THS
+
+With the new student count of THS, we need to recaculate passing math, reading and overall % at THS.
 
