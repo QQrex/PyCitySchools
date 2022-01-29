@@ -214,3 +214,19 @@ Our final school size summary DataFrame:
 Our last metric DataFrame is to look at the scores by school type. Since our per school summary DataFrame already has a column of school type, we can just use .groupby to group the school types and find average and % passing scores. Then create a Dataframe with school type as Index.
 
 ![type](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/type.PNG)
+
+## Results
+
+After performing our analysis after removing the scores for Thomas High School 9th graders we saw:
+
+- District Summary - A decrease in % passing math by 0.1%, reading by 0.3% and overall by 0.1%
+- School Summary - The only school affected in the school summary was THS which saw a <0.3% decrease in math, reading and overall passing %
+- Top and Bottom Performing schools - We saw no change in the top and bottom school rankings
+- Average math and reading scores per grade level - Saw no changes in scores, except for for NaN results for THS 9th graders
+- School spending summary - Saw increase average scores and passing % spending bracket $580-629 by about 1-6% in certaing categories and we saw a decrease in spending bracket    $630-644 by about 1-3%
+- School size summary- No changes
+- Type summary summary- No changes
+
+## Summary
+
+Upon reviewing the new metrics from our school district analysis, we only saw significant changes in School Spending summary.
