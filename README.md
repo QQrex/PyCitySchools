@@ -168,7 +168,7 @@ After we find all the average scores per school, by grade level. We will need to
 ![AverageDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/create%20average%20data%20frame%2C%20format.PNG)
 >Cell 1 and 2 - We concatenate our average grade Series and add the grade level column headers.
 >
->Cell 3 - Formate dataframe
+>Cell 3 - Format dataframe
 
 Our final average DataFrame looks like:
 
@@ -193,7 +193,7 @@ Next we can create our DataFrame for spending summary and add some formating to 
 
 Our final spending summary DataFrame:
 
-![spendingDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/size%20df%20check.PNG)
+![spendingDF](https://github.com/QQrex/School_District_Analysis/blob/main/Resources/spending%20df%20check.PNG)
 
 Next, we want to create a size summary DataFrame based on school size categories and average score/% passing for each category.
 
@@ -223,10 +223,10 @@ After performing our analysis after removing the scores for Thomas High School 9
 - School Summary - The only school affected in the school summary was THS which saw a <0.3% decrease in math, reading and overall passing %
 - Top and Bottom Performing schools - We saw no change in the top and bottom school rankings
 - Average math and reading scores per grade level - Saw no changes in scores, except for for NaN results for THS 9th graders
-- School spending summary - Saw increase average scores and passing % spending bracket $580-629 by about 1-6% in certaing categories and we saw a decrease in spending bracket    $630-644 by about 1-3%
+- School spending summary - No changes
 - School size summary- No changes
 - Type summary summary- No changes
 
 ## Summary
 
-Upon reviewing the new metrics from our school district analysis, we only saw significant changes in School Spending summary.
+Upon reviewing the new metrics from our school district analysis, we saw no signifcant changes to the overall metrics after removing Thomas High School 9th graders. This is due to the fact that THS overall math and reading scores average and passing % did not change much after THS 9th grader's scores were removed.
